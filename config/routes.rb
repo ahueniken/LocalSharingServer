@@ -1,5 +1,6 @@
 SharingServer::Application.routes.draw do
   
+  post "users/new"
   get "actions/show"
   post "actions/share"
   
