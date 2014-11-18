@@ -29,9 +29,10 @@ h1, h2 {
 }
 
 .app img {
-	height: 120px;
+	height: 100px;
 	width: auto;
 	display: inline-block;
+	margin-bottom: 10px;
 }
 
 .actions h3 {
@@ -78,9 +79,9 @@ h1, h2 {
     width: 480px;
   }
   .app {
-  	margin-left: 50px;
+  	margin-left: 30px;
   }
   .app {
-  	margin-left: 50px;
+  	margin-left: 30px;
   }
 }
