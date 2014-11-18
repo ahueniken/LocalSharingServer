@@ -6,7 +6,12 @@ class ActionsController < ApplicationController
   end
 
   def share
-  	Actions.create(:title => params[:title], :description => params[:description], :customer_id => params[:customer_id])
-  	render text: "Thanks for sending a POST request with cURL! Payload: #{params[:name]}"
+  	action = Actions.find_by customer_id: params[:customer_id]
+  	if action.nil?
+  		Actions.create(:title => params[:title], :description => params[:description], :customer_id => params[:customer_id])
+  	else 
+  		action.update(title: params[:title])
+  		action.update(description: params[:title])
+  	end
   end
 end
