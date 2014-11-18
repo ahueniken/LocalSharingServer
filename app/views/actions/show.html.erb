@@ -1,19 +1,5 @@
 <h1> What your neighbours are working on </h1>
 
-<div class="actions">
-  <% @actions.each do |action| %>
-    <div class="row">
-    	<div class="img">
-	    <% user = Users.find(action.customer_id) %>
-   	    <%= image_tag image_url(user.image_url)%> 
-		</div>
-		<div class="app">
-	    <h3> <%= action.title %> </h3>
-		</div>
-	</div>
-  <% end %>
+<div class="actions dynamic">
+  <%= render partial: 'actions.html.erb' %>
 </div>
-
-<% if @actions.length == 0 %>
-	<h2> Nobody is sharing right now </h2>
-<% end %>

@@ -3,6 +3,7 @@ SharingServer::Application.routes.draw do
   post "users/new"
   get "actions/show"
   post "actions/share"
+  get "actions/refresh"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

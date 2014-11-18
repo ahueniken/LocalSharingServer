@@ -14,4 +14,10 @@ class ActionsController < ApplicationController
   		action.update(description: params[:title])
   	end
   end
+
+  def refresh
+    @actions = Actions.all
+    render :partial => "actions.html.erb"
+  end
+
 end
