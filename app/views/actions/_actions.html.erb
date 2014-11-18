@@ -1,11 +1,15 @@
 <% @actions.each do |action| %>
     <div class="row">
     	<div class="img">
-	    <% user = Users.find(action.customer_id) %>
-   	    <%= image_tag image_url(user.image_url)%> 
+	    	<% user = Users.find(action.customer_id) %>
+   	    	<%= image_tag image_url(user.image_url)%> 
 		</div>
 		<div class="app">
-	    <h3> <%= action.title %> </h3>
+			<% icon = getAppIcon(action.title) %>
+			<% if icon != nil %>
+				<%= image_tag image_url(icon) %>
+			<% end %>
+	    	<h3> <%= action.title %> </h3>
 		</div>
 	</div>
   <% end %>
