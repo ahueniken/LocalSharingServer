@@ -75,7 +75,7 @@ h1, h2 {
 
 @media (max-width: 960px) {
   .container {
-    width: 600px;
+    width: 480px;
   }
   .app {
   	margin-left: 50px;
