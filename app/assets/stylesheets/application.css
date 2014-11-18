@@ -11,3 +11,36 @@
  *= require_self
  *= require_tree .
  */
+
+* {
+	font-family: arial;
+	color: #333333;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 60px;
+
+}
+
+.actions img {
+	max-height: 100px;
+	width: auto;
+	margin-left: 100px;
+	margin-right: 40px;
+}
+
+.actions h3 {
+	display: inline;
+}
+
+.app {
+	display: inline-block;
+	height: 100px;
+	vertical-align: middle;
+}
+
+.img {
+	display: inline-block;
+	height: 100px;
+}

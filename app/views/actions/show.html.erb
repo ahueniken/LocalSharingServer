@@ -1,10 +1,15 @@
-<h1>Actions#show</h1>
-<p>Find me in app/views/actions/show.html.erb</p>
+<h1> What your neighbours are working on </h1>
 
-<%= @actions.length %>
 <div class="actions">
   <% @actions.each do |action| %>
-    <img> </img>
-    <p> <%= action.title %> </p>
+    <div class="row">
+    	<div class="img">
+	    <% user = Users.find(action.customer_id) %>
+   	    <%= image_tag image_url(user.image_url)%> 
+		</div>
+		<div class="app">
+	    <h3> <%= action.title %> </h3>
+		</div>
+	</div>
   <% end %>
 </div>

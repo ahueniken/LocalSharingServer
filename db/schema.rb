@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118084122) do
+ActiveRecord::Schema.define(version: 20141118105049) do
 
   create_table "actions", force: true do |t|
     t.datetime "created_at"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20141118084122) do
   create_table "users", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_url"
   end
 
 end
