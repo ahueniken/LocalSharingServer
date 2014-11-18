@@ -1,4 +1,8 @@
 SharingServer::Application.routes.draw do
+  
+  get "actions_controller/show"
+  post "actions_controller/share"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
