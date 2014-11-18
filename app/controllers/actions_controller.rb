@@ -2,7 +2,7 @@ class ActionsController < ApplicationController
   protect_from_forgery except: :share
 
   def show
-  	@actions = Actions.all
+  	@actions = Actions.all.sort
   end
 
   def share
