@@ -1,4 +1,16 @@
 module ActionsHelper
+	def getUserImage(name)
+		case name
+		when 'Adam'
+			'adam.jpg'
+		when 'Ballmer'
+			'ballmer.jpg'
+		when 'R2D2'
+			'r2d2.png'
+		else
+			'profile.png'
+		end
+	end
 
 	def getAppIcon(appName) 
 		case appName
