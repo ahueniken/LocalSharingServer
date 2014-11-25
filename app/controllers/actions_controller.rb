@@ -1,5 +1,7 @@
 class ActionsController < ApplicationController
-  protect_from_forgery except: :share
+  protect_from_forgery 
+
+  before_filter :authenticate_user!, :only => [:share]
 
   def show
   	@actions = Actions.order('customer_id')
