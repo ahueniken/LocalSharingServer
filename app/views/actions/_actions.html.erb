@@ -1,14 +1,6 @@
 <% @actions.each do |action| %>
     <div class="row">
-    	<div class="user">
-    		<% user = Users.find(action.customer_id) %>
-	    	<!-- <% userPicUrl = user.image_url %>
-	    	<% if userPicUrl == nil %>
-	    		<% userPicUrl = 'nonefound.png' %>
-	    	<% end %>
-   	    	<%= image_tag image_url(userPicUrl)%>  
-   	    	<p> <%= user.name %> </p> -->
-		</div>
+    	
 		<div class="app">
 			<% icon = getAppIcon(action.title) %>
 			<% if icon != nil %>
