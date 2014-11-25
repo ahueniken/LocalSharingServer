@@ -23,7 +23,8 @@ class ActionsController < ApplicationController
   end
 
   def refresh
-    @actions = Actions.order('customer_id')
+    @actions = Action.all
+    @name = current_user.name
     render :partial => "actions.html.erb"
   end
 
