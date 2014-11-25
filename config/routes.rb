@@ -1,5 +1,8 @@
 SharingServer::Application.routes.draw do
   
+  devise_for :users
+  root to: "actions#show"
+
   post "users/new"
   get "actions/show"
   post "actions/share"
