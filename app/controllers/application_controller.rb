@@ -1,11 +1,10 @@
 class ApplicationController < ActionController::Base
-  
-  before_filter :authenticate_user!
-
-  before_action :configure_permitted_parameters, if: :devise_controller?
-  
   # Concerns
   include TokenAuthentication
+
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  respond_to :html, :xml, :json
 
   protected
   def configure_permitted_parameters

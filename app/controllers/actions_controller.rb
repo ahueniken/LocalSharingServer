@@ -1,6 +1,7 @@
 class ActionsController < ApplicationController
 
   def show
+    response.headers["auth_token"] = current_user.authentication_token
   	@actions = Action.all
     @name = current_user.name
   end
