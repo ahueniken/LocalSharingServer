@@ -22,27 +22,38 @@
 	max-height: 100px;
 	width: auto;
 	display: inline-block;
+  zoom: 1;
+  *display: inline;
+  
 }
 
 .app img {
 	height: 100px;
 	width: auto;
 	display: inline-block;
+  zoom: 1;
+  *display: inline;
 	margin-bottom: 10px;
 }
 
 .actions h3 {
 	display: inline-block;
+  zoom: 1;
+  *display: inline;
 }
 
 .app {
 	display: inline-block;
+  zoom: 1;
+  *display: inline;
 	height: 100px;
 	margin-left: 100px;
 }
 
 .user {
 	display: inline-block;
+  zoom: 1;
+  *display: inline;
 	height: 120px;
 	margin-left: 100px;
 	margin-right: 40px;
