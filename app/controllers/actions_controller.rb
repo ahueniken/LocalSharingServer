@@ -2,7 +2,11 @@ class ActionsController < ApplicationController
 
   def show
     response.headers["auth_token"] = current_user.authentication_token
-  	@actions = Action.all
+    if params[:ids] != nil 
+  	  @actions = Action.find(params[:ids])
+    else 
+      @actions = Action.all
+    end
     @name = current_user.name
   end
 
@@ -23,7 +27,11 @@ class ActionsController < ApplicationController
   end
 
   def refresh
-    @actions = Action.all
+    if params[:ids] != nil 
+      @actions = Action.find(params[:ids])
+    else 
+      @actions = Action.all
+    end
     @name = current_user.name
     render :partial => "actions.html.erb"
   end
