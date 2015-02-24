@@ -1,5 +1,6 @@
 SharingServer::Application.routes.draw do
   
+  get "pages/Downloads"
   devise_for :users
   root to: "actions#show"
 
