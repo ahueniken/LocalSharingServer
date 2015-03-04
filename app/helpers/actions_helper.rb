@@ -7,6 +7,12 @@ module ActionsHelper
 			'ballmer.jpg'
 		when 'R2D2'
 			'r2d2.png'
+		when 'mkannett'
+			'perryplatypus.jpg'
+		when 'Bruno'
+			'dearaujo.jpg'
+		when 'Peter Hamilton'
+			'peter.jpeg'
 		else
 			'profile.png'
 		end
