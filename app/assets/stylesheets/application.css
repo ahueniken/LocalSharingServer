@@ -31,13 +31,14 @@
 
 .action-row {
   text-align: center;
-  width: 420px;
+  width: 380px;
   display: inline-block;
   border: 2px solid #8AE;
   padding: 10px;
   margin: 15px;
   border-radius: 5px;
 }
+
 .action-row h3 {
 }
 
