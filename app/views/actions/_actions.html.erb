@@ -1,5 +1,6 @@
 
 <% @actions.each do |action| %>
+  <% if User.find(action.user_id).name == "Adam" %>
   <div class="action-row">
   	<div class="user">
   		<div class = "img">
@@ -20,6 +21,7 @@
 	    <h3> <%= action.title %> </h3>
 		</div>
 	</div>
+  <% end %>
 <% end %>
 
 <% if @actions.length == 0 %>

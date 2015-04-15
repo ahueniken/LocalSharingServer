@@ -5,6 +5,6 @@ $(document).ready(
          	console.log(pathname + search);
           setInterval(function() {
             $('.dynamic').load("/actions/refresh/" + search);
-        }, 3000);
+        }, 1500);
         console.log("test");
-    }); 
+    });

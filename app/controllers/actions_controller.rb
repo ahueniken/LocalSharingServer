@@ -2,9 +2,9 @@ class ActionsController < ApplicationController
 
   def show
     response.headers["auth_token"] = current_user.authentication_token
-    if params[:ids] != nil 
-  	  @actions = Action.find(params[:ids])
-    else 
+    if params[:ids] != nil
+  	  @actions = Action.all
+    else
       @actions = Action.all
     end
     @name = current_user.name
@@ -13,7 +13,7 @@ class ActionsController < ApplicationController
   def share
     if current_user.action == nil
       Action.create(user_id: current_user.id, title: params[:title])
-    else 
+    else
       current_user.action.update_attribute(:title, params[:title]);
     end
   end
@@ -21,15 +21,15 @@ class ActionsController < ApplicationController
   def create
     if current_user.action == nil
       Action.create(user_id: current_user.id, title: "NewApp")
-    else 
+    else
       current_user.action.update_attribute(:title, "Updated");
     end
   end
 
   def refresh
-    if params[:ids] != nil 
+    if params[:ids] != nil
       @actions = Action.find(params[:ids])
-    else 
+    else
       @actions = Action.all
     end
     @name = current_user.name
